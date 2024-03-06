@@ -379,7 +379,7 @@ article img {
   overflow: hidden;
   background-image: url('images/bg-slider.png');
   background-size: cover;
-  background-repeat: none;
+  background-repeat: no-repeat;
 }
 
 .slide {
@@ -390,6 +390,7 @@ article img {
   height: 450px;
   background-size: content;
   background-position: center;
+  margin:auto;
 }
 
 .slide img {
@@ -628,3 +629,24 @@ footer .contact {
         width: 100%;
     }
 }
+
+
+/* Responsivité */
+@media (min-width: 2200px) {
+    .slider {
+		background-position-y: -160px;
+	}
+}
+
+@media (min-width: 1700px) {
+   .slider {
+		background-position-y: -110px;
+	}
+}
+
+@media (min-width: 1600px) {
+	.slider {
+		background-position-y: -25px;
+	}
+}
+
