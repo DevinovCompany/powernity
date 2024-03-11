@@ -1,0 +1,22 @@
+<section id="engagements">
+        <img src="chemin_vers_image_engagements.jpg" alt="Nos Engagements">
+        <h2>Nos Engagements</h2>
+		<p>Dédiés à l'Excellence, la Durabilité et l'Innovation dans les Énergies Renouvelables</p>
+        <div class="col-container">
+            <article>
+                <img src="chemin_vers_image_engagement1.jpg" alt="Excellence Opérationnelle">
+                <h3>Excellence Opérationnelle</h3>
+                <p> Notre mission est de fournir des solutions d'énergie renouvelable de premier plan, soutenues par une expertise technique sans égal, afin d'assurer la réussite et la satisfaction de nos clients.</p>
+            </article>
+            <article>
+                <img src="chemin_vers_image_engagement2.jpg" alt="Engagement pour la Durabilité">
+                <h3>Engagement pour la Durabilité</h3>
+                <p>Nous nous engageons à réduire l'empreinte écologique par l'utilisation de technologies propres et durables, contribuant ainsi activement à la protection de notre planète.</p>
+            </article>
+            <article>
+                <img src="chemin_vers_image_engagement3.jpg" alt="Innovation Permanente">
+                <h3>Innovation Permanente</h3>
+                <p>Powernity est à la forefront de l'innovation dans le domaine des énergies renouvelables, offrant des produits et services qui redéfinissent les standards pour une efficacité et une performance accrues.p>
+            </article>
+        </div>
+    </section>
