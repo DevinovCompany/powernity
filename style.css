@@ -154,30 +154,36 @@ p {
 	padding: 0 10px;
 }
 
-header{
-  position: absolute;
-  top: 0;
-  width: 100%;
-  height: 50px;
+header {
+  position: relative; /* Définir le conteneur parent pour le positionnement absolu de .fixed-menu */
+  width: 100%; /* S'assure que l'en-tête prend toute la largeur */
+  height: auto; /* Ajustez selon le contenu, ou gardez auto */
 }
 
-
 .fixed-menu {
-    position: relative;
-    width: 100%;
-    max-width: 1280px;
-	background-color: transparent;
-    z-index: 1000;
+    position: absolute; /* Positionnement relatif au conteneur header */
+    top: 20px; /* Aligné en haut du conteneur parent */
+    right: 0; /* Collé à droite du conteneur parent */
+    width: auto; /* Ajustez selon le contenu ou spécifiez une largeur fixe si nécessaire */
+    max-width: 1280px; /* Ajustez ou enlevez selon les besoins */
+    background-color: #F7F3FA;
+    z-index: 1000; /* S'assurer qu'il reste au-dessus des autres contenus */
     display: flex;
-    justify-content: space-between; /* Distribue le logo et le menu de chaque côté */
+    justify-content: space-between; /* Pour la distribution interne des éléments */
     align-items: center;
-    padding: 0 20px; /* Ajoute un peu d'espace sur les côtés */
-	margin: auto;
-    
+    padding: 0 0 0 20px; /* Espace interne à droite et à gauche */
+}
+
+.menu-logo{
+	margin-left: -50px;
+	margin-right: 150px;
+	background-color: #fecc30;
+	border-radius: 80px;
 }
 
 .menu-logo img {
-    height: 60px; /* Ajustez en fonction de la taille de votre logo */
+    height: 30px !important;
+	padding: 15px 20px 10px 20px;
 }
 
 .menu-links ul {
@@ -189,7 +195,8 @@ header{
 }
 
 .menu-links li {
-    padding: 10px 20px;
+    padding: 10px 0; 
+	margin: 0 20px;
 	position: relative;
 	list-style-type: none;
 }
@@ -211,13 +218,12 @@ header{
 
 .menu-links a {
     text-decoration: none;
-    color: #ffffff;
+    color: #08484a;
     font-weight: normal;
 }
 
 .menu-links li:hover a{
-    
-    color: #fab72f;
+	 color: #fab72f;
     font-weight: bold;
 }
 
@@ -252,7 +258,7 @@ article img {
     justify-content: flex-start;
     gap: 20px; /* Ajustez l'espace entre la vidéo et le texte */
     position: relative; /* Position de référence pour les enfants absolus */
-	margin: 50px 0 100px 0;
+	margin: 50px auto !important;
 }
 
 .video-container {
@@ -265,6 +271,7 @@ article img {
 .presentation-video {
     width: 100%; /* La vidéo prend toute la largeur du conteneur */
     display: block; /* Élimine tout espace en dessous de la vidéo */
+	border-radius: 30px;
 }
 
 .video-background {
@@ -311,6 +318,7 @@ article img {
 	width: max-content;
 	margin-bottom: 0 !important;
 	padding:0 !important;
+	font-size: 20px;
 }
 
 .sub-title::after {
@@ -323,14 +331,35 @@ article img {
     background-color: #fab72f;
 }
 
+
+#gamme .sub-title{
+	font-family: 'Dolce Vita';
+    font-weight: bold;
+	color: #fab72f;
+	display: block;
+	position: relative;
+	width: max-content;
+	margin: 0 auto !important;
+	padding:0 !important;
+	font-size: 20px;
+}
+
+#gamme .sub-title::after {
+    content:"";
+	width: 50%;
+	position: absolute;
+	bottom: -5px;
+	left: 25%;
+    height: 2px; /* Ajustez à la taille désirée */
+    background-color: #fab72f;
+}
+
 #avantages h3{
 	margin-bottom: 0;
 }
 
 #gamme, #valeur {
-	padding : 0 50px;
-	margin-bottom: 100px;
-	
+	padding : 50px 30px;
 }
 
 #gamme article img {
@@ -346,19 +375,21 @@ article img {
 	color: #004345;
 	font-size: 30px;
 }
-
+#gamme h2{
+	margin-top: -20px;
+}
 #gamme h2::before, #avantages h2::before {
     content: url('images/Subtract.png'); /* Assurez-vous que le chemin correspond à l'endroit où vous avez placé l'image */
     width: 100px; /* Ajustez à la taille désirée */
     height: 100px; /* Ajustez à la taille désirée */
-    margin-right: -50px
+    margin-right: -70px
 }
 #gamme h2::after, #avantages h2::after {
    content:"";
 	width: 50%;
 	position: absolute;
 	bottom: -5px;
-	left: 30%;
+	left: 25%;
     height: 4px; /* Ajustez à la taille désirée */
     background-color: #004345;
 }
@@ -371,6 +402,7 @@ article img {
 
 #slider-section {
 	margin: 0;
+	margin-bottom: 50px;
 }
 
 .slider {
@@ -391,11 +423,11 @@ article img {
   height: 450px;
   background-size: content;
   background-position: center;
-  margin:auto;
+  margin: 50px auto 0 auto;
 }
 
 .slide img {
-  width: 20%;
+  width: 40%;
   height: auto;
   margin-right: 10%
 }
@@ -424,7 +456,7 @@ article img {
 .buttons {
   position: absolute;
   width: 80px;
-  top: 50%;
+  bottom: 35%;
   left: 40%;
   transform: translateY(-50%);
   display: flex;
@@ -447,19 +479,21 @@ button:hover {
 
 .value-section {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-	
+    align-items: center; /* Centre verticalement les éléments enfants */
+    justify-content: space-between; /* Garde un espace entre l'image et le contenu */
+    flex-wrap: wrap; /* Ajoutez cette propriété si vous voulez que les éléments passent à la ligne suivante sur les petits écrans */
 }
 
 .value-section .value-image {
-    flex-basis: 50%; /* Assignez la largeur à chaque côté */
+    flex-basis: 50%; /* Largeur de l'image */
+    max-width: 50%; /* Assurez-vous que l'image ne dépasse pas 50% de la largeur */
+    height: auto; /* Garde le ratio de l'image */
 }
 
-.value-section .content-container{
-	flex-basis: 40%;
-	margin-right: 10%;
-	text-align: left;
+.value-section .content-container {
+    flex-basis: 40%; /* Largeur du conteneur de contenu */
+    margin-right: 10%; /* Espace à droite (ajustez selon le besoin) */
+    text-align: left; /* Alignement du texte à gauche */
 }
 
 .value-section .content-container h2{
@@ -528,6 +562,27 @@ button:hover {
     display: block;
 }
 
+#avantages {
+		margin-bottom : 50px;
+} 
+
+#avantages article {
+  max-width: 20%;
+  border: 2px solid #dfdfdf;
+  padding-top: 20px;
+  border-radius: 10px;
+}
+
+#avantages h3 {
+  margin-top: 0;
+  max-width: max-content;
+  margin-left: -20px;
+  line-height: 35px;
+  padding: 10px 20px 10px 50px;
+  background: #f7f3fa;
+  border-radius: 10px;
+}
+
 footer {
     display: flex;
     justify-content: space-around; /* Répartit uniformément les sections du footer */
@@ -561,19 +616,34 @@ footer {
 
 
 /* Styles supplémentaires pour améliorer la lisibilité et l'esthétique */
-footer a {
-    color: #fff; /* Assure que les liens sont bien visibles */
-    text-decoration: none; /* Supprime le soulignement des liens */
+footer .max-width-1280 {
+    display: flex; /* Active Flexbox */
+    justify-content: space-between; /* Répartit l'espace entre les éléments */
+    align-items: flex-start; /* Alignement au début pour que les éléments soient alignés en haut */
+    flex-wrap: wrap; /* Permet aux éléments de passer à la ligne sur les petits écrans */
+    padding: 20px; /* Ajoute un peu d'espace autour des éléments */
 }
-footer h2 {
-    color: #fff; /* Assure que les liens sont bien visibles */
+
+footer section {
+    flex-basis: calc(33.333% - 40px); /* Répartit l'espace équitablement, en supposant 20px de padding sur les deux côtés */
+    max-width: calc(33.333% - 40px); /* Assure que la largeur maximale correspond à la base flexible moins le padding */
+    box-sizing: border-box; /* Inclut le padding dans le calcul de la largeur */
+}
+
+/* Styles supplémentaires pour assurer l'uniformité et améliorer l'apparence */
+footer p, footer h2 {
+    color: #fff; /* Assure que le texte est bien visible */
+    margin: 10px 0; /* Ajoute un peu d'espace autour des éléments */
+}
+
+.footer a {
+    color: #fff; /* Couleur des liens */
     text-decoration: none; /* Supprime le soulignement des liens */
 }
 
-footer a:hover {
-    text-decoration: underline; /* Ajoute un soulignement au survol pour indiquer que c'est un lien */
+.footer a:hover {
+    text-decoration: underline; /* Ajoute un soulignement au survol */
 }
-
 .max-width-1280{
 	width: 100%;
 	max-width: 1280px;
