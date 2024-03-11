@@ -373,10 +373,10 @@ article img {
 	font-family: 'Dolce Vita';
     font-weight: bold;
 	color: #004345;
-	font-size: 25px;
+	font-size: 28px;
 }
 #gamme h2{
-	margin-top: -20px;
+	margin-top: -30px;
 }
 #gamme h2::before, #avantages h2::before {
     content: url('images/Subtract.png'); /* Assurez-vous que le chemin correspond à l'endroit où vous avez placé l'image */
