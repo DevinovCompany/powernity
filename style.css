@@ -318,7 +318,7 @@ article img {
 	width: max-content;
 	margin-bottom: 0 !important;
 	padding:0 !important;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 .sub-title::after {
@@ -341,7 +341,7 @@ article img {
 	width: max-content;
 	margin: 0 auto !important;
 	padding:0 !important;
-	font-size: 20px;
+	font-size: 18px;
 }
 
 #gamme .sub-title::after {
@@ -373,7 +373,7 @@ article img {
 	font-family: 'Dolce Vita';
     font-weight: bold;
 	color: #004345;
-	font-size: 30px;
+	font-size: 25px;
 }
 #gamme h2{
 	margin-top: -20px;
